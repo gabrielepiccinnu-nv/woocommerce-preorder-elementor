@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: WooCommerce Preorder (for Elementor)
- * Plugin URI:  https://www.gabrielepiccinnu.com/
+ * Plugin URI:  https://www.networkvision.it/
  * Description: Modulo di preordine per WooCommerce con supporto Elementor
  * Version: 1.0
- * Author: Gabriele Piccinnu
- * Author URI: https://www.gabrielepiccinnu.com/
+ * Author: Network Vision
+ * Author URI: https://www.networkvision.it/
  * License: GPL v2 or later
  * Text Domain: woocommerce-preorder-elementor
  */
