@@ -4,6 +4,8 @@ if (!defined('ABSPATH')) {
 }
 
 function woocommerce_preorder_send_email($customer_name, $customer_email, $order_items, $order_total) {
+    $order_date = current_time('d/m/Y H:i'); // Data del preordine in formato locale
+    
     ob_start();
     $template_path = plugin_dir_path(dirname(__FILE__)) . 'email-template/new-preorder.php';
 
@@ -17,7 +19,7 @@ function woocommerce_preorder_send_email($customer_name, $customer_email, $order
     $message = ob_get_clean();
 
     $to = $customer_email;
-    $subject = __('Your Preorder Confirmation', 'woocommerce-preorder-elementor');
+    $subject = sprintf(__('Your Preorder - %s', 'woocommerce-preorder-elementor'), $order_date); // Data nell'oggetto
     $headers = array('Content-Type: text/html; charset=UTF-8');
 
     $mail_sent = wp_mail($to, $subject, $message, $headers);

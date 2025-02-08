@@ -9,6 +9,8 @@ $customer_name = isset($customer_name) ? esc_html($customer_name) : 'Customer';
 $customer_email = isset($customer_email) ? esc_html($customer_email) : 'example@email.com';
 $order_total = isset($order_total) ? esc_html($order_total) : '0.00';
 $order_items = isset($order_items) ? $order_items : []; // array prodotti
+$order_date = isset($order_date) ? esc_html($order_date) : current_time('d/m/Y H:i'); // Data del preordine
+$email_logo = get_option('woocommerce_email_header_image');
 
 ?>
 
@@ -38,16 +40,22 @@ a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !im
         <td align="center" style="background-color: #eeeeee;" bgcolor="#eeeeee">
             <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
                 <tr>
-                    <td align="center" style="padding: 35px; background-color: #F44336;" bgcolor="#F44336">
+                    <td align="center" style="padding: 35px; background-color: #000000;" bgcolor="#000000">
+                    <?php if ($email_logo) : ?>
+    <img src="<?php echo esc_url($email_logo); ?>" alt="Logo">
+<?php endif; ?>
+
                         <h1 style="color: #ffffff; font-family: Arial, sans-serif;">
-                            <?php esc_html_e('Thank You For Your Order!', 'woocommerce-preorder-elementor'); ?>
+                            <?php esc_html_e('Thank you for your preorder!', 'woocommerce-preorder-elementor'); ?>
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td align="center" style="padding: 20px; background-color: #ffffff;" bgcolor="#ffffff">
                         <h2 style="color: #333;"><?php echo esc_html($customer_name); ?></h2>
-                        <p><?php esc_html_e('Here is your order summary:', 'woocommerce-preorder-elementor'); ?></p>
+                        <p><?php echo __('Your preorder was placed on:', 'woocommerce-preorder-elementor'); ?> <strong><?php echo $order_date; ?></strong></p>
+
+                        <p><?php esc_html_e('Preorder summary:', 'woocommerce-preorder-elementor'); ?></p>
                         <table border="0" cellpadding="5" cellspacing="0" width="100%">
                             <tr>
                                 <th align="left"><?php esc_html_e('Product', 'woocommerce-preorder-elementor'); ?></th>
