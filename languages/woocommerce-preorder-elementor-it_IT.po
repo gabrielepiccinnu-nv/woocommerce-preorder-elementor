@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Preorder (for Elementor)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 11:28+0000\n"
+"PO-Revision-Date: 2025-02-05 11:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: Italiano\n"
+"Language: it_IT\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.7.1; wp-6.7.1\n"
+"X-Domain: woocommerce-preorder-elementor"
+
+#: D:/Sviluppo Web/Tenute
+#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:85
+msgid "Email"
+msgstr "Email"
+
+#: D:/Sviluppo Web/Tenute
+#: Altavera/REPO/woocommerce-preorder-elementor/woocommerce-preorder-elementor.php:54
+#: D:/Sviluppo Web/Tenute
+#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:152
+msgid "Error submitting preorder."
+msgstr "Errore nell'invio del preordine"
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://www.networkvision.it/"
+msgstr "https://www.networkvision.it/"
+
+#. Description of the plugin
+msgid "Modulo di preordine per WooCommerce con supporto Elementor"
+msgstr "Modulo di preordine per WooCommerce con supporto Elementor"
+
+#: D:/Sviluppo Web/Tenute
+#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:82
+msgid "Name"
+msgstr "Nome"
+
+#. Author of the plugin
+msgid "Network Vision"
+msgstr "Visione della rete"
+
+#: D:/Sviluppo Web/Tenute
+#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:74
+msgid "No products available."
+msgstr "Nessun prodotto disponibile."
+
+#: D:/Sviluppo Web/Tenute
+#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:80
+msgid "Order total:"
+msgstr "Totale dell'ordine:"
+
+#: D:/Sviluppo Web/Tenute
+#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:38
+msgid "Place a Preorder"
+msgstr "Effettua un preordine"
+
+#: D:/Sviluppo Web/Tenute
+#: Altavera/REPO/woocommerce-preorder-elementor/woocommerce-preorder-elementor.php:52
+#: D:/Sviluppo Web/Tenute
+#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:138
+msgid "Please fill in all required fields."
+msgstr "Compilare tutti i campi obbligatori."
+
+#: D:/Sviluppo Web/Tenute
+#: Altavera/REPO/woocommerce-preorder-elementor/woocommerce-preorder-elementor.php:51
+msgid "Please select at least one product."
+msgstr "Selezionare almeno un prodotto."
+
+#: D:/Sviluppo Web/Tenute
+#: Altavera/REPO/woocommerce-preorder-elementor/woocommerce-preorder-elementor.php:53
+#: D:/Sviluppo Web/Tenute
+#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:150
+msgid "Preorder successfully submitted!"
+msgstr "Preordine inviato con successo!"
+
+#: D:/Sviluppo Web/Tenute
+#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:92
+#| msgid "Submit Preorder"
+msgid "Submit order"
+msgstr "Invia ordine"
+
+#: D:/Sviluppo Web/Tenute
+#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:18
+msgid "WooCommerce Preorder"
+msgstr "Preordine WooCommerce"
+
+#. Name of the plugin
+msgid "WooCommerce Preorder (for Elementor)"
+msgstr "Preordine WooCommerce (per Elementor)"
