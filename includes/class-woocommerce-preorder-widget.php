@@ -4,7 +4,7 @@ if (!defined('ABSPATH')) {
 }
 
 use Elementor\Widget_Base;
-use Elementor\Controls_Manager;
+//use Elementor\Controls_Manager;
 
 class WooCommerce_Preorder_Widget extends Widget_Base
 {
@@ -85,9 +85,11 @@ class WooCommerce_Preorder_Widget extends Widget_Base
                 <label><?php esc_html_e('Email', 'woocommerce-preorder-elementor'); ?></label>
                 <input type="email" class="form-control" id="email" required>
                 <input type="hidden" id="recaptcha-response" name="recaptcha-response">
+                <input type="hidden" id="preorder-total" name="total" value="0">
 
                 <div class="elementor-widget-container">
                     <div class="elementor-button-wrapper">
+ 
                         <button type="submit" class="elementor-button elementor-button-link elementor-size-sm">
                             <span class="elementor-button-content-wrapper">
                                 <span class="elementor-button-text"><?php esc_html_e('Submit order', 'woocommerce-preorder-elementor'); ?></span>

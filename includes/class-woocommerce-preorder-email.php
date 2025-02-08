@@ -5,10 +5,10 @@ if (!defined('ABSPATH')) {
 
 function woocommerce_preorder_send_email($customer_name, $customer_email, $order_items, $order_total) {
     ob_start();
-    $template_path = plugin_dir_path(__FILE__) . 'email-template/new-preorder.php';
+    $template_path = plugin_dir_path(dirname(__FILE__)) . 'email-template/new-preorder.php';
 
     if (file_exists($template_path)) {
-        include $template_path; // Usa il template per creare il contenuto dell'email
+        include $template_path; // template per il contenuto email
     } else {
         error_log('WooCommerce Preorder: Il file del template email non è stato trovato in ' . $template_path);
         return false;

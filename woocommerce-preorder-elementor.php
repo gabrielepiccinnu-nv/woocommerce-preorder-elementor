@@ -85,7 +85,13 @@ function woocommerce_preorder_enqueue_recaptcha() {
             true
         );
     } else {
-        error_log('WooCommerce Preorder: La Site Key reCAPTCHA non è configurata.');
+        //error_log('WooCommerce Preorder: La Site Key reCAPTCHA non è configurata.');
     }
 }
 add_action('wp_enqueue_scripts', 'woocommerce_preorder_enqueue_recaptcha');
+
+
+add_action('wp_footer', function() {
+    echo '<script>console.log("🟢 AJAX registrato correttamente.");</script>';
+}, 99);
+

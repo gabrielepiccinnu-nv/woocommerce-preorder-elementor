@@ -3,12 +3,12 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-// Variabili dinamiche ricevute dalla funzione di invio email
+// variabili dinamiche
 $order_id = isset($order_id) ? esc_html($order_id) : '0000000';
 $customer_name = isset($customer_name) ? esc_html($customer_name) : 'Customer';
 $customer_email = isset($customer_email) ? esc_html($customer_email) : 'example@email.com';
 $order_total = isset($order_total) ? esc_html($order_total) : '0.00';
-$order_items = isset($order_items) ? $order_items : []; // Array dei prodotti
+$order_items = isset($order_items) ? $order_items : []; // array prodotti
 
 ?>
 
