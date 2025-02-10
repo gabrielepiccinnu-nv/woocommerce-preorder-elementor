@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let name = document.getElementById("name").value.trim();
         let email = document.getElementById("email").value.trim();
+        let notes = document.getElementById("notes").value.trim();
+
 
         let orderItems = [];
         quantities.forEach((input, index) => {
@@ -70,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formData.append("nonce", woocommercePreorderData.nonce);
         formData.append("name", name);
         formData.append("email", email);
+        formData.append("notes", notes);
         formData.append("total", totalValue);
 
         orderItems.forEach((item, index) => {

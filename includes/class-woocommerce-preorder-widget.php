@@ -84,19 +84,44 @@ class WooCommerce_Preorder_Widget extends Widget_Base
 
                 <label><?php esc_html_e('Email', 'woocommerce-preorder-elementor'); ?></label>
                 <input type="email" class="form-control" id="email" required>
+
+                <label><?php esc_html_e('Additional notes', 'woocommerce-preorder-elementor'); ?></label>
+                <textarea class="form-control" rows="3" id="notes"></textarea>
+
                 <input type="hidden" id="recaptcha-response" name="recaptcha-response">
                 <input type="hidden" id="preorder-total" name="total" value="0">
 
                 <div class="elementor-widget-container">
                     <div class="elementor-button-wrapper">
  
-                        <button type="submit" class="elementor-button elementor-button-link elementor-size-sm">
+                        <button type="submit" class="elementor-button preorder-button">
                             <span class="elementor-button-content-wrapper">
                                 <span class="elementor-button-text"><?php esc_html_e('Submit order', 'woocommerce-preorder-elementor'); ?></span>
                             </span>
                         </button>
+                        
                     </div>
                 </div>
+
+                <style>
+                    .elementor-button.preorder-button {
+                        margin-top: 3rem;
+    background-color: #b98d58; 
+    color: #fff; 
+    font-size: 16px;
+  
+    padding: 12px 24px;
+  
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.elementor-button.preorder-button:hover {
+    background-color: #b98d58; /* Cambia il colore al passaggio del mouse */
+    color: #fff; 
+
+}
+                </style>
 
             </form>
         </div>

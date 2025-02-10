@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-function woocommerce_preorder_send_email($customer_name, $customer_email, $order_items, $order_total) {
+function woocommerce_preorder_send_email($customer_name, $customer_email, $customer_notes, $order_items, $order_total) {
     $order_date = current_time('d/m/Y H:i'); // Data del preordine in formato locale
     
     ob_start();
