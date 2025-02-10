@@ -59,14 +59,16 @@ function woocommerce_preorder_enqueue_scripts() {
 
     $recaptcha_site_key = get_option('woocommerce_preorder_recaptcha_site_key');
     wp_localize_script('woocommerce-preorder-js', 'woocommercePreorderData', array(
-        'ajax_url' => admin_url('admin-ajax.php'),
-        'nonce' => wp_create_nonce('preorder_nonce'),
-        'locale' => get_locale(),
-        'recaptcha_site_key' => $recaptcha_site_key, // Passa la Site Key
-        'error_no_products' => __('Please select at least one product.', 'woocommerce-preorder-elementor'),
-        'error_missing_fields' => __('Please fill in all required fields.', 'woocommerce-preorder-elementor'),
-        'success_message' => __('Preorder successfully submitted!', 'woocommerce-preorder-elementor'),
-        'error_message' => __('Error submitting preorder.', 'woocommerce-preorder-elementor'),
+        'ajax_url'              => admin_url('admin-ajax.php'),
+        'nonce'                 => wp_create_nonce('preorder_nonce'),
+        'locale'                => get_locale(),
+        'recaptcha_site_key'    => $recaptcha_site_key, // Passa la Site Key
+        'error_no_products'     => __('Please select at least one product.', 'woocommerce-preorder-elementor'),
+        'error_missing_fields'  => __('Please fill in all required fields.', 'woocommerce-preorder-elementor'),
+        'success_message'       => __('Preorder successfully submitted!', 'woocommerce-preorder-elementor'),
+        'success_email_sent'    => __('A confirmation email has been sent.', 'woocommerce-preorder-elementor'),
+        'success_form_reset'    => __('The form has been reset.', 'woocommerce-preorder-elementor'),
+        'error_message'         => __('Error submitting preorder.', 'woocommerce-preorder-elementor'),
     ));
 }
 add_action('wp_enqueue_scripts', 'woocommerce_preorder_enqueue_scripts');
@@ -90,8 +92,4 @@ function woocommerce_preorder_enqueue_recaptcha() {
 }
 add_action('wp_enqueue_scripts', 'woocommerce_preorder_enqueue_recaptcha');
 
-
-add_action('wp_footer', function() {
-    echo '<script>console.log("🟢 AJAX registrato correttamente.");</script>';
-}, 99);
-
+ 
