@@ -107,6 +107,7 @@ class WooCommerce_Preorder_Widget extends Widget_Base
                     .elementor-button.preorder-button {
                         margin-top: 3rem;
     background-color: #b98d58; 
+    border-color: #b98d58; 
     color: #fff; 
     font-size: 16px;
   
@@ -118,6 +119,7 @@ class WooCommerce_Preorder_Widget extends Widget_Base
 
 .elementor-button.preorder-button:hover {
     background-color: #b98d58; /* Cambia il colore al passaggio del mouse */
+    border-color: #b98d58; /* Cambia il colore al passaggio del mouse */
     color: #fff; 
 
 }
