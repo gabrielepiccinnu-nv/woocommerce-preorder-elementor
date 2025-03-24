@@ -129,6 +129,7 @@ class WooCommerce_Preorder_Widget extends Widget_Base
                         border: 1px solid #b6ab8d;
                         border-radius: 10px;
                         padding: 3rem;
+                        margin-bottom: 3rem;
                     }
 
                     #preorder-form .form-control {
@@ -154,7 +155,6 @@ class WooCommerce_Preorder_Widget extends Widget_Base
 
                     .elementor-button.preorder-button {
                         margin-top: 2rem;
-                        margin-bottom: 3rem;
                         background-color: #b98d58;
                         border-color: #b98d58;
                         color: #fff;

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce Preorder (for Elementor)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-05 11:28+0000\n"
-"PO-Revision-Date: 2025-03-24 01:36+0000\n"
+"PO-Revision-Date: 2025-03-24 01:35+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italiano\n"
 "Language: it_IT\n"
@@ -18,7 +18,7 @@ msgstr ""
 #: D:/Sviluppo Web/Network Vision/Tenute
 #: Altavera/REPONV/woocommerce-preorder-elementor/woocommerce-preorder-elementor.php:69
 msgid "A confirmation email has been sent."
-msgstr "Email di conferma inviata."
+msgstr ""
 
 #: D:/Sviluppo Web/Network Vision/Tenute
 #: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:92
@@ -56,10 +56,6 @@ msgid ""
 "I accept the Privacy Policy and consent to data processing under EU "
 "Regulation 2016/679."
 msgstr ""
-"Ai sensi del Regolamento UE 2016/679, la comunicazione dei dati verrà intesa "
-"come esplicita manifestazione di consenso al trattamento degli stessi, ferma "
-"restando la facoltà di esercitare tutti i diritti previsti dagli art. 15-16-"
-"17-18-20-21 del Regolamento UE 2016/679."
 
 #: D:/Sviluppo Web/Network Vision/Tenute
 #: Altavera/REPONV/woocommerce-preorder-elementor/email-template/new-preorder.php:125
