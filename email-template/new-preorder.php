@@ -11,7 +11,7 @@ $customer_notes = isset($customer_notes) ? esc_html($customer_notes) : '';
 $order_total = isset($order_total) ? esc_html($order_total) : '0.00';
 $order_items = isset($order_items) ? $order_items : []; // array prodotti
 $order_date = isset($order_date) ? esc_html($order_date) : current_time('d/m/Y H:i'); // Data del preordine
-$email_logo = plugin_dir_url(__FILE__) . 'tenute-altavera-email-logo.png';
+$email_logo = plugin_dir_url(__FILE__) . 'img/tenute-altavera-email-logo.png';
 
 
 ?>
