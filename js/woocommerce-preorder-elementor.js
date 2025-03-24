@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const quantities = document.querySelectorAll(".quantity");
     const totalSpan = document.getElementById("total");
     const submitButton = document.querySelector("button[type='submit']");
+    const privacyCheckbox = document.getElementById("privacy");
 
     if (!totalSpan || !submitButton) {
         console.error("Required elements not found on the page.");
@@ -38,15 +39,14 @@ document.addEventListener("DOMContentLoaded", function () {
     updateTotal();
 
 
-    const privacyCheckbox = document.getElementById("privacy");
 
     if (privacyCheckbox) {
         submitButton.disabled = true;
         submitButton.classList.add("button-disabled");
-    
+
         privacyCheckbox.addEventListener("change", function () {
             submitButton.disabled = !this.checked;
-    
+
             if (this.checked) {
                 submitButton.classList.remove("button-disabled");
             } else {
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-    
+
 
     // invio del modulo
     document.getElementById("preorder-form").addEventListener("submit", function (event) {
@@ -86,41 +86,54 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        //  form-data
-        let formData = new URLSearchParams();
-        formData.append("action", "send_preorder");
-        formData.append("nonce", woocommercePreorderData.nonce);
-        formData.append("name", name);
-        formData.append("email", email);
-        formData.append("phone", phone);
-        formData.append("notes", notes);
-        formData.append("total", totalValue);
-
-        orderItems.forEach((item, index) => {
-            formData.append(`order_items[${index}][name]`, item.name);
-            formData.append(`order_items[${index}][quantity]`, item.quantity);
+        //  google rec
+        grecaptcha.ready(function () {
+            grecaptcha.execute(woocommercePreorderData.recaptcha_site_key, { action: 'preorder_submit' }).then(function (token) {
+                sendPreorder(token);
+            });
         });
 
-        // richiesta ajax
-        fetch(woocommercePreorderData.ajax_url, {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: formData
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    const messageDiv = document.getElementById("preorder-success-message");
-                    const form = document.getElementById("preorder-form");
+        // funzione di invio dati
+        function sendPreorder(recaptchaToken) {
+            let formData = new URLSearchParams();
+            formData.append("action", "send_preorder");
+            formData.append("nonce", woocommercePreorderData.nonce);
+            formData.append("name", name);
+            formData.append("email", email);
+            formData.append("phone", phone);
+            formData.append("notes", notes);
+            formData.append("total", totalValue);
+            formData.append("recaptcha-response", recaptchaToken); // 
 
-                    messageDiv.textContent = woocommercePreorderData.success_message;
-                    messageDiv.style.display = "block";
+            orderItems.forEach((item, index) => {
+                formData.append(`order_items[${index}][name]`, item.name);
+                formData.append(`order_items[${index}][quantity]`, item.quantity);
+            });
 
-                    // Nasconde il form dopo l’invio
-                    form.style.display = "none";
-                }
-
+            // richiesta ajax
+            fetch(woocommercePreorderData.ajax_url, {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: formData
             })
-            .catch(error => console.error("Errore:", error));
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        const messageDiv = document.getElementById("preorder-success-message");
+                        const form = document.getElementById("preorder-form");
+
+                        messageDiv.textContent = woocommercePreorderData.success_message;
+                        messageDiv.style.display = "block";
+
+                        // Nasconde il form dopo l’invio
+                        form.style.display = "none";
+                    }
+
+                })
+                .catch(error => console.error("Errore:", error));
+        }
     });
+
+ 
+
 });
