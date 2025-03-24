@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const quantities = document.querySelectorAll(".quantity");
     const totalSpan = document.getElementById("total");
     const submitButton = document.querySelector("button[type='submit']");
-    
+
     if (!totalSpan || !submitButton) {
         console.error("Required elements not found on the page.");
         return;
@@ -18,24 +18,43 @@ document.addEventListener("DOMContentLoaded", function () {
             let quantity = parseInt(input.value) || 0;
             total += price * quantity;
         });
-    
+
         let formatter = new Intl.NumberFormat(locale, {
             style: 'decimal',
             minimumFractionDigits: 2,
             maximumFractionDigits: 2
         });
-    
+
         totalSpan.textContent = formatter.format(total);
-    
+
         document.getElementById("preorder-total").value = total.toFixed(2);
     }
-    
+
 
     quantities.forEach(input => {
         input.addEventListener("input", updateTotal);
     });
 
     updateTotal();
+
+
+    const privacyCheckbox = document.getElementById("privacy");
+
+    if (privacyCheckbox) {
+        submitButton.disabled = true;
+        submitButton.classList.add("button-disabled");
+    
+        privacyCheckbox.addEventListener("change", function () {
+            submitButton.disabled = !this.checked;
+    
+            if (this.checked) {
+                submitButton.classList.remove("button-disabled");
+            } else {
+                submitButton.classList.add("button-disabled");
+            }
+        });
+    }
+    
 
     // invio del modulo
     document.getElementById("preorder-form").addEventListener("submit", function (event) {
@@ -93,14 +112,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (data.success) {
                     const messageDiv = document.getElementById("preorder-success-message");
                     const form = document.getElementById("preorder-form");
-                
+
                     messageDiv.textContent = woocommercePreorderData.success_message;
                     messageDiv.style.display = "block";
-                
+
                     // Nasconde il form dopo l’invio
                     form.style.display = "none";
                 }
-                
+
             })
             .catch(error => console.error("Errore:", error));
     });

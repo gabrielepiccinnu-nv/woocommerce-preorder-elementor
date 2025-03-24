@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce Preorder (for Elementor)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-05 11:28+0000\n"
-"PO-Revision-Date: 2025-03-24 01:33+0000\n"
+"PO-Revision-Date: 2025-03-24 01:06+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italiano\n"
 "Language: it_IT\n"
@@ -49,13 +49,6 @@ msgstr "Impossibile inviare l'email."
 #. Author URI of the plugin
 msgid "https://www.networkvision.it/"
 msgstr "https://www.networkvision.it/"
-
-#: D:/Sviluppo Web/Network Vision/Tenute
-#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:103
-msgid ""
-"I accept the Privacy Policy and consent to data processing under EU "
-"Regulation 2016/679."
-msgstr ""
 
 #: D:/Sviluppo Web/Network Vision/Tenute
 #: Altavera/REPONV/woocommerce-preorder-elementor/email-template/new-preorder.php:125
@@ -109,7 +102,7 @@ msgstr "Numero di telefono"
 #: D:/Sviluppo Web/Network Vision/Tenute
 #: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:38
 msgid "Place a Preorder"
-msgstr "Preordina online"
+msgstr "Effettua un preordine"
 
 #: D:/Sviluppo Web/Network Vision/Tenute
 #: Altavera/REPONV/woocommerce-preorder-elementor/woocommerce-preorder-elementor.php:67
@@ -139,11 +132,6 @@ msgstr "Preordine inviato con successo!"
 #: Altavera/REPONV/woocommerce-preorder-elementor/email-template/new-preorder.php:99
 msgid "Preorder summary:"
 msgstr "Dettagli Preordine"
-
-#: D:/Sviluppo Web/Network Vision/Tenute
-#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:105
-msgid "Privacy Policy"
-msgstr ""
 
 #: D:/Sviluppo Web/Network Vision/Tenute
 #: Altavera/REPONV/woocommerce-preorder-elementor/email-template/new-preorder.php:102
@@ -176,7 +164,7 @@ msgid "Security check failed!"
 msgstr ""
 
 #: D:/Sviluppo Web/Network Vision/Tenute
-#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:118
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:102
 #| msgid "Submit Preorder"
 msgid "Submit order"
 msgstr "Invia ordine"

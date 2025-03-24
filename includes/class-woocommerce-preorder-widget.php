@@ -34,7 +34,7 @@ class WooCommerce_Preorder_Widget extends Widget_Base
         $nonce = wp_create_nonce('preorder_nonce'); // Protezione XSS/CSRF
 ?>
         <div class="woocommerce-preorder-container">
-            <span style="display:block; font-size: 1.6rem; margin-bottom: 3rem">
+            <span style="display: block;font-size: 1.7rem;margin-bottom: 3rem;text-align: center;font-weight: 500;color: #ac905e;">
                 <?php esc_html_e('Place a Preorder', 'woocommerce-preorder-elementor'); ?>
             </span>
 
@@ -57,7 +57,7 @@ class WooCommerce_Preorder_Widget extends Widget_Base
                             while ($products->have_posts()) : $products->the_post();
                                 global $product;
                         ?>
-                                <div class="elementor-column elementor-col-100 elementor-field-group" style="margin-bottom: 15px; border-bottom: 1px solid #ddd;">
+                                <div class="elementor-column elementor-col-100 elementor-field-group" style="margin-bottom: 15px; border-bottom: 1px solid #b6ab8d;">
 
                                     <div class="elementor-column elementor-col-60">
                                         <span><?php echo esc_html(get_the_title()); ?></span>
@@ -79,7 +79,7 @@ class WooCommerce_Preorder_Widget extends Widget_Base
                     </div>
                 </div>
 
-                <h4 style="margin-bottom: 3rem"><?php esc_html_e('Order total:', 'woocommerce-preorder-elementor'); ?> € <span id="total">0.00</span></h4>
+                <h4 style="margin-bottom: 5rem;"><?php esc_html_e('Order total:', 'woocommerce-preorder-elementor'); ?> € <span id="total">0.00</span></h4>
                 <label><?php esc_html_e('Name', 'woocommerce-preorder-elementor'); ?></label>
                 <input type="text" class="form-control" id="name" required>
 
@@ -94,8 +94,24 @@ class WooCommerce_Preorder_Widget extends Widget_Base
 
                 <input type="hidden" id="recaptcha-response" name="recaptcha-response">
                 <input type="hidden" id="preorder-total" name="total" value="0">
+
+
+                <div class="elementor-column elementor-col-100 elementor-field-group elementor-field-type-checkbox">
+                    <div class="elementor-field-subgroup">
+                        <label class="elementor-field-label">
+                            <input type="checkbox" id="privacy" required style="margin-right: 5px;">
+                            <?php esc_html_e('I accept the Privacy Policy and consent to data processing under EU Regulation 2016/679.', 'woocommerce-preorder-elementor'); ?>
+                            <a href="<?php echo esc_url(get_privacy_policy_url()); ?>" target="_blank" rel="noopener noreferrer">
+                                <?php esc_html_e('Privacy Policy', 'woocommerce-preorder-elementor'); ?>
+                            </a>
+                        </label>
+                    </div>
+                </div>
+
+
+
                 <div class="elementor-widget-container">
-                    <div class="elementor-button-wrapper">
+                    <div class="elementor-button-wrapper" style="display: flex;justify-content: center;">
 
                         <button type="submit" class="elementor-button preorder-button">
                             <span class="elementor-button-content-wrapper">
@@ -108,7 +124,11 @@ class WooCommerce_Preorder_Widget extends Widget_Base
 
                 <style>
                     .woocommerce-preorder-container {
-                        max-width: 480px;
+                        max-width: 568px;
+                        background: #f9f8f4;
+                        border: 1px solid #b6ab8d;
+                        border-radius: 10px;
+                        padding: 3rem;
                     }
 
                     #preorder-form .form-control {
@@ -122,13 +142,19 @@ class WooCommerce_Preorder_Widget extends Widget_Base
                         margin-bottom: .5rem;
                     }
 
+                    #preorder-form .elementor-field-type-checkbox label {
+                        text-transform: none;
+                        line-height: 1.64;
+                    }
+
                     #preorder-form span .price {
                         color: #333;
                         font-weight: 400;
                     }
 
                     .elementor-button.preorder-button {
-                        margin-top: 3rem;
+                        margin-top: 2rem;
+                        margin-bottom: 3rem;
                         background-color: #b98d58;
                         border-color: #b98d58;
                         color: #fff;
@@ -152,6 +178,14 @@ class WooCommerce_Preorder_Widget extends Widget_Base
                     .woocommerce-preorder-success {
                         font-weight: 500;
                         font-size: 1.2rem;
+                    }
+
+                    .elementor-button.button-disabled {
+                        background-color: #ccc !important;
+                        border-color: #ccc !important;
+                        color: #666 !important;
+                        cursor: not-allowed !important;
+                        opacity: 0.7;
                     }
                 </style>
 
