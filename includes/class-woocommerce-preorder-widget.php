@@ -42,12 +42,14 @@ class WooCommerce_Preorder_Widget extends Widget_Base
                 <input type="hidden" id="preorder-nonce" value="<?php echo esc_attr($nonce); ?>">
                 <input type="hidden" id="recaptcha-response" name="recaptcha-response">
 
-                <div class="elementor-section">
+                <div class="elementor-section" style="margin-bottom: 4rem">
                     <div class="elementor-row">
                         <?php
                         $args = array(
                             'post_type'      => 'product',
-                            'posts_per_page' => -1
+                            'posts_per_page' => -1,
+                            'orderby'        => 'title',
+                            'order'          => 'ASC'
                         );
 
                         $products = new WP_Query($args);
@@ -55,16 +57,16 @@ class WooCommerce_Preorder_Widget extends Widget_Base
                             while ($products->have_posts()) : $products->the_post();
                                 global $product;
                         ?>
-                                <div class="elementor-column elementor-col-100 elementor-field-group" style="margin-bottom: 15px; padding: 10px; border-bottom: 1px solid #ddd;">
+                                <div class="elementor-column elementor-col-100 elementor-field-group" style="margin-bottom: 15px; border-bottom: 1px solid #ddd;">
 
-                                    <div class="elementor-column elementor-col-40">
+                                    <div class="elementor-column elementor-col-60">
                                         <span><?php echo esc_html(get_the_title()); ?></span>
                                     </div>
-                                    <div class="elementor-column elementor-col-30">
+                                    <div class="elementor-column elementor-col-20">
                                         <span>€ <span class="price"><?php echo esc_html($product->get_price()); ?></span></span>
                                     </div>
-                                    <div class="elementor-column elementor-col-30">
-                                        <input type="number" class="form-control quantity" data-price="<?php echo esc_attr($product->get_price()); ?>" min="0" value="0">
+                                    <div class="elementor-column elementor-col-20">
+                                        <input type="number" class="form-control quantity" data-price="<?php echo esc_attr($product->get_price()); ?>" min="0" max="10" value="0">
                                     </div>
 
                                 </div>
@@ -77,58 +79,89 @@ class WooCommerce_Preorder_Widget extends Widget_Base
                     </div>
                 </div>
 
-                <h4><?php esc_html_e('Order total:', 'woocommerce-preorder-elementor'); ?> € <span id="total">0.00</span></h4>
-
+                <h4 style="margin-bottom: 3rem"><?php esc_html_e('Order total:', 'woocommerce-preorder-elementor'); ?> € <span id="total">0.00</span></h4>
                 <label><?php esc_html_e('Name', 'woocommerce-preorder-elementor'); ?></label>
                 <input type="text" class="form-control" id="name" required>
 
                 <label><?php esc_html_e('Email', 'woocommerce-preorder-elementor'); ?></label>
                 <input type="email" class="form-control" id="email" required>
 
+                <label><?php esc_html_e('Phone', 'woocommerce-preorder-elementor'); ?></label>
+                <input type="tel" class="form-control" id="phone" pattern="[\d\s\+\-\(\)]{6,}" required>
+
                 <label><?php esc_html_e('Additional notes', 'woocommerce-preorder-elementor'); ?></label>
                 <textarea class="form-control" rows="3" id="notes"></textarea>
 
                 <input type="hidden" id="recaptcha-response" name="recaptcha-response">
                 <input type="hidden" id="preorder-total" name="total" value="0">
-
                 <div class="elementor-widget-container">
                     <div class="elementor-button-wrapper">
- 
+
                         <button type="submit" class="elementor-button preorder-button">
                             <span class="elementor-button-content-wrapper">
                                 <span class="elementor-button-text"><?php esc_html_e('Submit order', 'woocommerce-preorder-elementor'); ?></span>
                             </span>
                         </button>
-                        
+
                     </div>
                 </div>
 
                 <style>
+                    .woocommerce-preorder-container {
+                        max-width: 480px;
+                    }
+
+                    #preorder-form .form-control {
+                        padding: 1rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    #preorder-form label {
+                        text-transform: uppercase;
+                        font-size: .875rem;
+                        margin-bottom: .5rem;
+                    }
+
+                    #preorder-form span .price {
+                        color: #333;
+                        font-weight: 400;
+                    }
+
                     .elementor-button.preorder-button {
                         margin-top: 3rem;
-    background-color: #b98d58; 
-    border-color: #b98d58; 
-    color: #fff; 
-    font-size: 16px;
-  
-    padding: 12px 24px;
-  
-    text-transform: uppercase;
-    transition: all 0.3s ease-in-out;
-}
+                        background-color: #b98d58;
+                        border-color: #b98d58;
+                        color: #fff;
+                        font-size: 16px;
 
-.elementor-button.preorder-button:hover {
-    background-color: #b98d58; /* Cambia il colore al passaggio del mouse */
-    border-color: #b98d58; /* Cambia il colore al passaggio del mouse */
-    color: #fff; 
+                        padding: 12px 24px;
 
-}
+                        text-transform: uppercase;
+                        transition: all 0.3s ease-in-out;
+                    }
+
+                    .elementor-button.preorder-button:hover {
+                        background-color: #b98d58;
+                        /* Cambia il colore al passaggio del mouse */
+                        border-color: #b98d58;
+                        /* Cambia il colore al passaggio del mouse */
+                        color: #fff;
+
+                    }
+
+                    .woocommerce-preorder-success {
+                        font-weight: 500;
+                        font-size: 1.2rem;
+                    }
                 </style>
 
             </form>
+
+            <div id="preorder-success-message" style="display: none;" class="woocommerce-preorder-success"></div>
+
         </div>
 
-       
+
 <?php
     }
 }

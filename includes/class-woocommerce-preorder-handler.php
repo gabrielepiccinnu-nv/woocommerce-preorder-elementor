@@ -8,6 +8,7 @@ function woocommerce_preorder_handle_submission() {
 
     $customer_name = sanitize_text_field($_POST['name'] ?? '');
     $customer_email = sanitize_email($_POST['email'] ?? '');
+    $customer_phone = sanitize_text_field($_POST['phone']);
     $customer_notes = sanitize_text_field($_POST['notes'] ?? '');
     $order_total = sanitize_text_field($_POST['total'] ?? '');
     //$order_total = isset($_POST['total']) ? floatval(str_replace(',', '.', str_replace('.', '', $_POST['total']))) : 0;
@@ -15,7 +16,7 @@ function woocommerce_preorder_handle_submission() {
 
 
     
-    if (empty($customer_name) || empty($customer_email) || empty($_POST['order_items'])) {
+    if (empty($customer_name) || empty($customer_email)|| empty($customer_phone) || empty($_POST['order_items'])) {
         wp_send_json_error(__('Missing order details.', 'woocommerce-preorder-elementor'));
         return;
     }
@@ -30,7 +31,7 @@ function woocommerce_preorder_handle_submission() {
     }
 
     // Invia l'email con i dati
-    $email_sent = woocommerce_preorder_send_email($customer_name, $customer_email, $customer_notes, $order_items, $order_total);
+    $email_sent = woocommerce_preorder_send_email($customer_name, $customer_email, $customer_phone, $customer_notes, $order_items, $order_total);
 
     if ($email_sent) {
         wp_send_json_success(__('Preorder successfully submitted!', 'woocommerce-preorder-elementor'));

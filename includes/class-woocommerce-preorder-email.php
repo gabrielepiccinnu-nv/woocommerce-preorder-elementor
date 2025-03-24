@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-function woocommerce_preorder_send_email($customer_name, $customer_email, $customer_notes, $order_items, $order_total) {
+function woocommerce_preorder_send_email($customer_name, $customer_email, $customer_phone, $customer_notes, $order_items, $order_total) {
     $order_date = current_time('d/m/Y H:i'); // Data del preordine in formato locale
     $store_email = get_option('woocommerce_email_from_address'); // Email del negozio presa dalle impostazioni WooCommerce
     
@@ -32,6 +32,7 @@ function woocommerce_preorder_send_email($customer_name, $customer_email, $custo
     $message_store  = "Nuovo preordine ricevuto\n\n";
     $message_store .= "Cliente: $customer_name\n";
     $message_store .= "Email: $customer_email\n";
+    $message_store .= "Numero di telefono: $customer_phone\n";
     $message_store .= "Data: $order_date\n";
     $message_store .= "\nDettagli ordine:\n";
     

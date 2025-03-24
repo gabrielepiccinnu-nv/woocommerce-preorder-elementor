@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let name = document.getElementById("name").value.trim();
         let email = document.getElementById("email").value.trim();
+        let phone = document.getElementById("phone").value.trim();
         let notes = document.getElementById("notes").value.trim();
 
 
@@ -61,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let totalValue = totalSpan.textContent.replace(/\./g, '').replace(',', '.');
 
 
-        if (!name || !email || totalValue === 0) {
+        if (!name || !email || !phone || totalValue === 0) {
             alert("Please fill in all required fields.");
             return;
         }
@@ -72,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formData.append("nonce", woocommercePreorderData.nonce);
         formData.append("name", name);
         formData.append("email", email);
+        formData.append("phone", phone);
         formData.append("notes", notes);
         formData.append("total", totalValue);
 
@@ -89,10 +91,16 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    console.log("Preordine inviato!");
-                } else {
-                    console.log("Si è verificato un errore durante l'invio del preordine");
+                    const messageDiv = document.getElementById("preorder-success-message");
+                    const form = document.getElementById("preorder-form");
+                
+                    messageDiv.textContent = woocommercePreorderData.success_message;
+                    messageDiv.style.display = "block";
+                
+                    // Nasconde il form dopo l’invio
+                    form.style.display = "none";
                 }
+                
             })
             .catch(error => console.error("Errore:", error));
     });

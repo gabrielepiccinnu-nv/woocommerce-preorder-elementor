@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce Preorder (for Elementor)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-05 11:28+0000\n"
-"PO-Revision-Date: 2025-02-05 11:49+0000\n"
+"PO-Revision-Date: 2025-03-24 01:06+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italiano\n"
 "Language: it_IT\n"
@@ -15,29 +15,57 @@ msgstr ""
 "X-Loco-Version: 2.7.1; wp-6.7.1\n"
 "X-Domain: woocommerce-preorder-elementor"
 
-#: D:/Sviluppo Web/Tenute
-#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:85
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/woocommerce-preorder-elementor.php:69
+msgid "A confirmation email has been sent."
+msgstr ""
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:92
+msgid "Additional notes"
+msgstr "Note aggiuntive"
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/email-template/new-preorder.php:115
+msgid "Additional notes:"
+msgstr "Note aggiuntive:"
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:86
 msgid "Email"
 msgstr "Email"
 
-#: D:/Sviluppo Web/Tenute
-#: Altavera/REPO/woocommerce-preorder-elementor/woocommerce-preorder-elementor.php:54
-#: D:/Sviluppo Web/Tenute
-#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:152
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/woocommerce-preorder-elementor.php:71
 msgid "Error submitting preorder."
 msgstr "Errore nell'invio del preordine"
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-handler.php:39
+msgid "Failed to send email."
+msgstr "Impossibile inviare l'email."
 
 #. URI of the plugin
 #. Author URI of the plugin
 msgid "https://www.networkvision.it/"
 msgstr "https://www.networkvision.it/"
 
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/email-template/new-preorder.php:125
+msgid "If you have any questions, feel free to contact us."
+msgstr "Per ulteriori informazioni non esitare a contattarci"
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-handler.php:20
+msgid "Missing order details."
+msgstr "Dettagli ordine mancanti."
+
 #. Description of the plugin
 msgid "Modulo di preordine per WooCommerce con supporto Elementor"
 msgstr "Modulo di preordine per WooCommerce con supporto Elementor"
 
-#: D:/Sviluppo Web/Tenute
-#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:82
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:83
 msgid "Name"
 msgstr "Nome"
 
@@ -45,51 +73,138 @@ msgstr "Nome"
 msgid "Network Vision"
 msgstr "Visione della rete"
 
-#: D:/Sviluppo Web/Tenute
-#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:74
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-email.php:30
+#, php-format
+msgid "New Preorder Received - %s"
+msgstr "Nuovo Preordine Ricevuto - %s"
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:76
 msgid "No products available."
 msgstr "Nessun prodotto disponibile."
 
-#: D:/Sviluppo Web/Tenute
-#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:80
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/email-template/new-preorder.php:23
+msgid "Order Confirmation"
+msgstr "Conferma Ordine"
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:82
 msgid "Order total:"
 msgstr "Totale dell'ordine:"
 
-#: D:/Sviluppo Web/Tenute
-#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:38
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:89
+msgid "Phone"
+msgstr "Numero di telefono"
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:38
 msgid "Place a Preorder"
 msgstr "Effettua un preordine"
 
-#: D:/Sviluppo Web/Tenute
-#: Altavera/REPO/woocommerce-preorder-elementor/woocommerce-preorder-elementor.php:52
-#: D:/Sviluppo Web/Tenute
-#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:138
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/woocommerce-preorder-elementor.php:67
 msgid "Please fill in all required fields."
 msgstr "Compilare tutti i campi obbligatori."
 
-#: D:/Sviluppo Web/Tenute
-#: Altavera/REPO/woocommerce-preorder-elementor/woocommerce-preorder-elementor.php:51
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/woocommerce-preorder-elementor.php:66
 msgid "Please select at least one product."
 msgstr "Selezionare almeno un prodotto."
 
-#: D:/Sviluppo Web/Tenute
-#: Altavera/REPO/woocommerce-preorder-elementor/woocommerce-preorder-elementor.php:53
-#: D:/Sviluppo Web/Tenute
-#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:150
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-settings.php:18
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-settings.php:19
+msgid "Preorder Settings"
+msgstr ""
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/woocommerce-preorder-elementor.php:68
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-handler.php:37
 msgid "Preorder successfully submitted!"
 msgstr "Preordine inviato con successo!"
 
-#: D:/Sviluppo Web/Tenute
-#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:92
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/email-template/new-preorder.php:99
+msgid "Preorder summary:"
+msgstr "Dettagli Preordine"
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/email-template/new-preorder.php:102
+msgid "Product"
+msgstr "Prodotto"
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/email-template/new-preorder.php:103
+msgid "Quantity"
+msgstr "Quantità"
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-settings.php:50
+msgid "reCAPTCHA Secret Key"
+msgstr "reCAPTCHA Chiave Privata"
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-settings.php:35
+msgid "reCAPTCHA Settings"
+msgstr "Impostazioni reCAPTCHA"
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-settings.php:42
+msgid "reCAPTCHA Site Key"
+msgstr "reCAPTCHA Chiave Sito"
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-handler.php:5
+msgid "Security check failed!"
+msgstr ""
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:102
 #| msgid "Submit Preorder"
 msgid "Submit order"
 msgstr "Invia ordine"
 
-#: D:/Sviluppo Web/Tenute
-#: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:18
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/email-template/new-preorder.php:90
+msgid "Thank you for your preorder!"
+msgstr ""
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/woocommerce-preorder-elementor.php:70
+msgid "The form has been reset."
+msgstr ""
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/email-template/new-preorder.php:120
+msgid "Total:"
+msgstr ""
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:18
 msgid "WooCommerce Preorder"
 msgstr "Preordine WooCommerce"
 
 #. Name of the plugin
 msgid "WooCommerce Preorder (for Elementor)"
 msgstr "Preordine WooCommerce (per Elementor)"
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-settings.php:79
+msgid "WooCommerce Preorder Settings"
+msgstr ""
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-email.php:21
+#, php-format
+msgid "Your Preorder - %s"
+msgstr ""
+
+#: D:/Sviluppo Web/Network Vision/Tenute
+#: Altavera/REPONV/woocommerce-preorder-elementor/email-template/new-preorder.php:97
+msgid "Your preorder was placed on:"
+msgstr ""
