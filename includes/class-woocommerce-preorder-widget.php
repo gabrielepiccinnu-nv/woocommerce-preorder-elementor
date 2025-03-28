@@ -86,7 +86,7 @@ class WooCommerce_Preorder_Widget extends Widget_Base
                     </div>
                 </div>
 
-                <h4 style="margin-bottom: 5rem;"><?php esc_html_e('Order total:', 'woocommerce-preorder-elementor'); ?> € <span id="total">0.00</span></h4>
+                <h4 style="margin-bottom: 5rem;"><?php esc_html_e('Order total:', 'woocommerce-preorder-elementor'); ?> € <span id="total">0,00</span></h4>
                 <label><?php esc_html_e('Name', 'woocommerce-preorder-elementor'); ?></label>
                 <input type="text" class="form-control" id="name" required>
 
