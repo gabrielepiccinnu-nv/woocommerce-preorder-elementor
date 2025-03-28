@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce Preorder (for Elementor)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-05 11:28+0000\n"
-"PO-Revision-Date: 2025-03-28 12:18+0000\n"
+"PO-Revision-Date: 2025-03-28 12:16+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italiano\n"
 "Language: it_IT\n"
@@ -130,7 +130,7 @@ msgstr "Selezionare almeno un prodotto."
 #: D:/Sviluppo Web/Tenute
 #: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-settings.php:19
 msgid "Preorder Settings"
-msgstr "Impostazioni preordine"
+msgstr ""
 
 #: D:/Sviluppo Web/Tenute
 #: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-handler.php:65
@@ -193,7 +193,7 @@ msgstr ""
 #: D:/Sviluppo Web/Tenute
 #: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-handler.php:6
 msgid "Security check failed!"
-msgstr "Controllo sicurezza fallito"
+msgstr ""
 
 #: D:/Sviluppo Web/Tenute
 #: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:118
@@ -204,7 +204,7 @@ msgstr "Invia ordine"
 #: D:/Sviluppo Web/Tenute
 #: Altavera/REPO/woocommerce-preorder-elementor/email-template/new-preorder.php:90
 msgid "Thank you for your preorder!"
-msgstr "Grazie per l'ordine"
+msgstr ""
 
 #: D:/Sviluppo Web/Tenute
 #: Altavera/REPO/woocommerce-preorder-elementor/woocommerce-preorder-elementor.php:70
@@ -219,13 +219,11 @@ msgid ""
 "This site is protected by reCAPTCHA and the Google %1$sPrivacy Policy%2$s "
 "and %3$sTerms of Service%4$s apply."
 msgstr ""
-"Questo sito è protetto da reCAPTCHA e Google. %1$sPrivacy Policy%2$s, "
-"%3$sTerms of Service%4$s"
 
 #: D:/Sviluppo Web/Tenute
 #: Altavera/REPO/woocommerce-preorder-elementor/email-template/new-preorder.php:120
 msgid "Total:"
-msgstr "Totale:"
+msgstr ""
 
 #: D:/Sviluppo Web/Tenute
 #: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-widget.php:18
@@ -239,15 +237,15 @@ msgstr "Preordine WooCommerce (per Elementor)"
 #: D:/Sviluppo Web/Tenute
 #: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-settings.php:79
 msgid "WooCommerce Preorder Settings"
-msgstr "Impostazioni preordine WooCommerce"
+msgstr ""
 
 #: D:/Sviluppo Web/Tenute
 #: Altavera/REPO/woocommerce-preorder-elementor/includes/class-woocommerce-preorder-email.php:21
 #, php-format
 msgid "Your Preorder - %s"
-msgstr "Il tuo preordine - %s"
+msgstr ""
 
 #: D:/Sviluppo Web/Tenute
 #: Altavera/REPO/woocommerce-preorder-elementor/email-template/new-preorder.php:97
 msgid "Your preorder was placed on:"
-msgstr "Il tuo ordine del:"
+msgstr ""
