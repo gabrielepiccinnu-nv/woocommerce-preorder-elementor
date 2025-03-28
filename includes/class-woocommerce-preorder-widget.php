@@ -59,13 +59,13 @@ class WooCommerce_Preorder_Widget extends Widget_Base
                         ?>
                                 <div class="elementor-column elementor-col-100 elementor-field-group" style="margin-bottom: 15px; border-bottom: 1px solid #b6ab8d;">
 
-                                    <div class="elementor-column elementor-col-60">
+                                    <div class="elementor-column elementor-sm-60 elementor-col-60">
                                         <span><?php echo esc_html(get_the_title()); ?></span>
                                     </div>
-                                    <div class="elementor-column elementor-col-20">
+                                    <div class="elementor-column elementor-sm-20 elementor-col-20">
                                         <span>€ <span class="price"><?php echo esc_html($product->get_price()); ?></span></span>
                                     </div>
-                                    <div class="elementor-column elementor-col-20">
+                                    <div class="elementor-column elementor-sm-20 elementor-col-20">
                                         <input type="number" class="form-control quantity" data-price="<?php echo esc_attr($product->get_price()); ?>" min="0" max="10" value="0">
                                     </div>
 
@@ -122,7 +122,29 @@ class WooCommerce_Preorder_Widget extends Widget_Base
                     </div>
                 </div>
 
+                <div class="elementor-widget-container">
+
+                
+                <p style="font-size: 0.8rem; color: #777; margin-top: 1rem;">
+    <?php echo sprintf(
+        /* translators: %1$s and %2$s are links to Google Privacy Policy and Terms */
+        esc_html__('This site is protected by reCAPTCHA and the Google %1$sPrivacy Policy%2$s and %3$sTerms of Service%4$s apply.', 'woocommerce-preorder-elementor'),
+        '<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">',
+        '</a>',
+        '<a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">',
+        '</a>'
+    ); ?>
+</p>
+
+
+                </div>
+
                 <style>
+
+.grecaptcha-badge { 
+    visibility: hidden !important;
+}
+
                     .woocommerce-preorder-container {
                         max-width: 568px;
                         background: #f9f8f4;
