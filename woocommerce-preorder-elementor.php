@@ -65,7 +65,7 @@ function woocommerce_preorder_enqueue_scripts() {
         'recaptcha_site_key'    => $recaptcha_site_key, // Passa la Site Key
         'error_no_products'     => __('Please select at least one product.', 'woocommerce-preorder-elementor'),
         'error_missing_fields'  => __('Please fill in all required fields.', 'woocommerce-preorder-elementor'),
-        'success_message'       => __('Preorder successfully submitted!', 'woocommerce-preorder-elementor'),
+        'success_message'       => __('Preorder successfully submitted! <br> You will receive an email with order details.', 'woocommerce-preorder-elementor'),
         'success_email_sent'    => __('A confirmation email has been sent.', 'woocommerce-preorder-elementor'),
         'success_form_reset'    => __('The form has been reset.', 'woocommerce-preorder-elementor'),
         'error_message'         => __('Error submitting preorder.', 'woocommerce-preorder-elementor'),
