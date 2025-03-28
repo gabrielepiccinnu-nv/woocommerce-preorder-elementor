@@ -92,4 +92,9 @@ function woocommerce_preorder_enqueue_recaptcha() {
 }
 add_action('wp_enqueue_scripts', 'woocommerce_preorder_enqueue_recaptcha');
 
- 
+
+add_filter('wp_mail_from_name', 'woocommerce_preorder_mail_from_name');
+function woocommerce_preorder_mail_from_name($name)
+{
+    return "Tenute Altavera";
+}
