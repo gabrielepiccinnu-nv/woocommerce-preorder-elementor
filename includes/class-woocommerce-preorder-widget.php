@@ -150,8 +150,14 @@ class WooCommerce_Preorder_Widget extends Widget_Base
                         background: #f9f8f4;
                         border: 1px solid #b6ab8d;
                         border-radius: 10px;
-                        padding: 3rem;
+                        padding: 1rem;
                         margin-bottom: 3rem;
+                    }
+
+                    @media screen and (min-width:768px) {
+                        .woocommerce-preorder-container {
+                            padding: 3rem;
+                        }
                     }
 
                     #preorder-form .form-control {
