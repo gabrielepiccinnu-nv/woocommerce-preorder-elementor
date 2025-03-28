@@ -49,7 +49,14 @@ class WooCommerce_Preorder_Widget extends Widget_Base
                             'post_type'      => 'product',
                             'posts_per_page' => -1,
                             'orderby'        => 'title',
-                            'order'          => 'ASC'
+                            'order'          => 'ASC',
+                            'meta_query' => array(
+                                array(
+                                    'key' => '_stock_status',
+                                    'value' => 'instock',
+                                    'compare' => '=',
+                                ),
+                            ),
                         );
 
                         $products = new WP_Query($args);
